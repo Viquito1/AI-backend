@@ -1,0 +1,7 @@
+Django>=5.0
+python-dotenv
+openai
+django-cors-headers
+channels==4.0.0
+daphne==4.0.0
+whitenoise

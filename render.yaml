@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: django-ai-backend
+    env: python
+    buildCommand: ./build.sh
+    startCommand: cd Backend && daphne Backend.asgi:application --port $PORT --bind 0.0.0.0
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.0
+      - key: DEBUG
+        value: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: OPENAI_API_KEY
+        sync: false
